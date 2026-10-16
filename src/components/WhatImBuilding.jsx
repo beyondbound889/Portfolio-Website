@@ -856,7 +856,7 @@ export default function WhatImBuilding() {
                       Glycomics™
                     </h4>
                     <p className="font-body text-xs text-navy/50 dark:text-white/45 mt-1">
-                      Natural Glucose Metabolism Support · 60 capsules
+                      My formula for weight & blood sugar support · 60 capsules
                     </p>
                   </div>
                   <span className="inline-flex items-center gap-1 bg-teal/10 dark:bg-teal-light/10 border border-teal/20 dark:border-teal-light/20 text-teal dark:text-teal-light text-[10px] font-heading font-bold uppercase tracking-widest px-3 py-1.5 rounded-full whitespace-nowrap shrink-0">
@@ -866,7 +866,7 @@ export default function WhatImBuilding() {
 
                 {/* Product Description */}
                 <p className="font-body text-sm text-navy/70 dark:text-white/65 leading-relaxed mb-5">
-                  A thoughtfully designed wellness supplement made with nature-inspired, science-led ingredients, formulated to support metabolic health and healthy glucose balance as part of a balanced lifestyle — without extreme or aggressive approaches.
+                  I formulated Glycomics with nature-inspired, science-led ingredients to support metabolic health, healthy weight management, and blood sugar balance as part of a balanced lifestyle, without extreme or aggressive approaches.
                 </p>
 
                 {/* Founder Self-Observation Callout */}
