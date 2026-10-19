@@ -36,15 +36,15 @@ export default function JourneyFrames() {
     {
       title: 'The Market Gap',
       metric: "The problem wasn't a lack of products. It was a lack of clarity.",
-      caption: 'Reviewing market data and speaking to consumers showed me that wellness brands were trying to solve everything. Few focused deeply on metabolism. People were left overwhelmed by conflicting advice, with no trusted destination for metabolic health.',
+      caption: 'Reviewing market data and speaking to consumers showed me that people navigating weight management were overwhelmed by conflicting advice and unclear product claims.',
       icon: RiPulseLine,
       gradient: 'from-teal/5 via-sage/40 to-accent/10',
       image: aboutImg
     },
     {
       title: 'Building Beyond Bound®',
-      metric: 'Testing Assumptions First',
-      caption: "I launched my nutraceutical venture to bridge this gap. To test my assumptions, I spent months wearing a continuous glucose monitor, tracking my own metabolic responses and learning directly from the data. If I could not verify a formulation's impact on myself, I would never ask anyone else to trust it.",
+      metric: 'Listening to Consumers',
+      caption: 'I launched my nutraceutical venture to bridge this gap. I listened to consumers and reviewed the weight-management landscape to understand where clearer information and more focused products were needed.',
       icon: RiLeafLine,
       gradient: 'from-sage/20 via-accent/5 to-teal/10',
       image: beyondboundImg
@@ -52,7 +52,7 @@ export default function JourneyFrames() {
     {
       title: 'Venture Growth',
       metric: 'FROM THESIS TO FORMULATION',
-      caption: 'I chose depth over breadth. Rather than building another generic wellness brand, I focused Beyond Bound entirely on metabolic health. That focus led to Glycomics™, our first weight management formula. The lesson was simple: trust should be built on evidence, not promises.',
+      caption: 'I chose depth over breadth. Rather than building another generic wellness brand, I focused Beyond Bound on weight management. That focus led to Glycomics™, our first weight-management formula. The lesson was simple: trust should be built on evidence, not promises.',
       icon: RiLineChartLine,
       gradient: 'from-teal/10 via-sage to-accent/5',
       image: glycomicsImg
@@ -60,7 +60,7 @@ export default function JourneyFrames() {
     {
       title: 'Future Vision',
       metric: 'Trust Before Marketing',
-      caption: "My goal isn't to build another supplement company. I want Beyond Bound to become a health brand where trust comes before marketing, evidence comes before claims, and that people can turn to for absolute clarity about their metabolic health.",
+      caption: "My goal isn't to build another supplement company. I want Beyond Bound to become a trusted weight-management brand where clarity comes before marketing and responsible product information comes before promises.",
       icon: RiCompassLine,
       gradient: 'from-sage/40 via-accent/10 to-teal/20',
       image: visionImg
