@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { useState, useEffect } from 'react';
 import { RiArrowRightUpLine } from 'react-icons/ri';
 import healthcareEntrepreneurshipImg from '../assets/healthcare_entrepreneurship.webp';
 import frame3Img from '../assets/frame3.png';
@@ -623,4 +622,4 @@ export default function WhatImBuilding() {
       </div>
     </section>
   );
-}
+                            }
