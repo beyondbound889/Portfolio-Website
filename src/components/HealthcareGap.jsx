@@ -135,7 +135,7 @@ export default function HealthcareGap() {
                 className="flex items-center gap-6 p-6 sm:p-7 bg-white dark:bg-navy/40 border border-border/40 dark:border-white/5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.015)] dark:shadow-none hover:shadow-[0_8px_30px_rgb(0,0,0,0.03)] dark:hover:bg-navy/50 transition-all duration-300"
               >
                 <div className="text-teal dark:text-teal-light text-3xl sm:text-4xl font-light w-10 flex justify-center items-center flex-shrink-0 select-none">
-                  0
+                  <span aria-hidden="true">◆</span>
                 </div>
                 <div className="text-left">
                   <h3 className="font-heading font-semibold text-navy dark:text-white text-[16px] sm:text-[17px] mb-1">
