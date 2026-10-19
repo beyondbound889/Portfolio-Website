@@ -856,7 +856,7 @@ export default function WhatImBuilding() {
                       Glycomics™
                     </h4>
                     <p className="font-body text-xs text-navy/50 dark:text-white/45 mt-1">
-                      My formula for weight & blood sugar support · 60 capsules
+                      A weight management formula
                     </p>
                   </div>
                   <span className="inline-flex items-center gap-1 bg-teal/10 dark:bg-teal-light/10 border border-teal/20 dark:border-teal-light/20 text-teal dark:text-teal-light text-[10px] font-heading font-bold uppercase tracking-widest px-3 py-1.5 rounded-full whitespace-nowrap shrink-0">
@@ -866,18 +866,8 @@ export default function WhatImBuilding() {
 
                 {/* Product Description */}
                 <p className="font-body text-sm text-navy/70 dark:text-white/65 leading-relaxed mb-5">
-                  I formulated Glycomics with nature-inspired, science-led ingredients to support metabolic health, healthy weight management, and blood sugar balance as part of a balanced lifestyle, without extreme or aggressive approaches.
+                  I formulated Glycomics with nature-inspired, science-led ingredients to support healthy weight management as part of a balanced lifestyle, without extreme or aggressive approaches.
                 </p>
-
-                {/* Founder Self-Observation Callout */}
-                <div className="bg-[#0a2e2a] dark:bg-[#0a2420] rounded-xl p-5 mb-5 border border-teal/15 dark:border-teal-light/10">
-                  <span className="inline-block text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-teal-light/80 mb-2.5 border-b border-teal-light/15 pb-1.5">
-                    FOUNDER SELF-OBSERVATION
-                  </span>
-                  <p className="font-body text-[13px] text-white/80 leading-relaxed">
-                    In the founder's own continuous-glucose self-observation: same food, with Glycomics — a steadier post-meal pattern, no sudden drop, no hypoglycemia.
-                  </p>
-                </div>
 
                 {/* Amazon CTA Button */}
                 <a
@@ -895,7 +885,7 @@ export default function WhatImBuilding() {
 
           {/* ─── Disclaimer ─── */}
           <p className="font-body text-[11px] text-navy/40 dark:text-white/30 leading-relaxed mt-8 max-w-5xl">
-            Glycomics™ is a wellness supplement intended to support metabolic health as part of a balanced lifestyle. It is not intended to diagnose, treat, cure, or prevent any disease. Self-observation reflects one individual's experience and is not a clinical claim.
+            Glycomics™ is a wellness supplement intended to support healthy weight management as part of a balanced lifestyle. It is not intended to diagnose, treat, cure, or prevent any disease.
           </p>
         </motion.div>
 
