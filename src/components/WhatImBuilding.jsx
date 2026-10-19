@@ -596,7 +596,7 @@ export default function WhatImBuilding() {
 
                 {/* Product Description */}
                 <p className="font-body text-sm text-navy/70 dark:text-white/65 leading-relaxed mb-5">
-                  Glycomics is a weight-management formula designed to support healthy weight management as part of a balanced lifestyle, without extreme or aggressive approaches.
+                  Glycomics is designed to support healthy weight management as part of a balanced lifestyle, without extreme or aggressive approaches.
                 </p>
 
                 {/* Amazon CTA Button */}
@@ -622,4 +622,4 @@ export default function WhatImBuilding() {
       </div>
     </section>
   );
-                            }
+}
