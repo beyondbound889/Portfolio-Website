@@ -55,16 +55,16 @@ export default function HealthcareGap() {
               variants={fadeUp}
               className="text-3xl sm:text-4xl lg:text-[42px] font-bold font-heading text-navy dark:text-white tracking-tight leading-[1.15]"
             >
-              Why hasn't someone already solved wellness in India?
+              Why is weight management so confusing in India?
             </motion.h2>
 
             {/* Paragraphs */}
             <div className="space-y-6 text-navy/70 dark:text-white/70 font-body text-base lg:text-[17px] leading-[1.75]">
               <motion.p variants={fadeUp}>
-                The Indian market is flooded with supplements making massive health promises. Yet metabolic disorders continue to climb. When I spoke directly to consumers, I realised they weren't suffering from a shortage of health products.
+                The Indian market is crowded with wellness products and bold promises. When I spoke directly to consumers, I realised people navigating weight management weren't suffering from a shortage of products.
               </motion.p>
               <motion.p variants={fadeUp}>
-                They were suffering from a complete lack of transparency, education, and validation. They didn't know what to believe.
+                They needed clearer information, more transparency, and help knowing what to believe.
               </motion.p>
             </div>
 
@@ -103,10 +103,10 @@ export default function HealthcareGap() {
                 </div>
                 <div className="text-left">
                   <h3 className="font-heading font-semibold text-navy dark:text-white text-[16px] sm:text-[17px] mb-1">
-                    Metabolic disorders
+                    Conflicting advice
                   </h3>
                   <p className="font-body text-sm text-navy/60 dark:text-white/60 leading-relaxed">
-                    Rising across India despite more products on the shelf
+                    People navigating weight management are left unsure where to start
                   </p>
                 </div>
               </motion.div>
@@ -124,7 +124,7 @@ export default function HealthcareGap() {
                     Verified claims
                   </h3>
                   <p className="font-body text-sm text-navy/60 dark:text-white/60 leading-relaxed">
-                    Most wellness labels make promises no one has measured
+                    Weight-management products can be hard to compare
                   </p>
                 </div>
               </motion.div>
@@ -142,7 +142,7 @@ export default function HealthcareGap() {
                     Trusted brands
                   </h3>
                   <p className="font-body text-sm text-navy/60 dark:text-white/60 leading-relaxed">
-                    No focused metabolic-health brand people could turn to
+                    A need for focused, trustworthy weight-management options
                   </p>
                 </div>
               </motion.div>
