@@ -20,7 +20,7 @@ const NAV_LINKS = [
   { label: 'Contact', id: 'contact' },
 ];
 
-const FOCUS_TAGS = ['Healthcare', 'Entrepreneurship', 'Metabolic Wellness'];
+const FOCUS_TAGS = ['Healthcare', 'Entrepreneurship', 'Weight Management'];
 
 export default function Connect() {
   const [activePhilosophy, setActivePhilosophy] = useState(0);
@@ -178,7 +178,7 @@ export default function Connect() {
               </div>
               
               <p className="text-navy/70 dark:text-white/60 font-body text-sm leading-relaxed max-w-md">
-                Building Beyond Bound — a metabolic wellness venture focused on preventive health and honest brand-building in India.
+                Building Beyond Bound — a weight-management-focused wellness venture committed to clear product information and honest brand-building in India.
               </p>
 
               {/* Status indicator row */}
@@ -344,7 +344,7 @@ export default function Connect() {
                     </div>
                     <div className="text-left">
                       <span className="block text-[10px] font-heading font-medium text-navy/40 dark:text-white/40 uppercase tracking-wider mb-0.5">
-                        Metabolic wellness venture
+                        Weight-management wellness venture
                       </span>
                       <span className="text-sm font-semibold font-heading text-navy dark:text-white transition-colors">
                         Beyond Bound
@@ -426,7 +426,7 @@ export default function Connect() {
               variants={fadeUp}
               className="font-body text-sm text-navy/60 dark:text-white/50 leading-relaxed max-w-[280px] mx-auto"
             >
-              Building India's most trusted metabolic health brand.
+              Building a trusted weight-management brand for India.
             </motion.p>
           </motion.div>
 
