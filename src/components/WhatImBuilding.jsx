@@ -1,73 +1,25 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { RiArrowRightUpLine } from 'react-icons/ri';
 import healthcareEntrepreneurshipImg from '../assets/healthcare_entrepreneurship.webp';
 import frame3Img from '../assets/frame3.png';
-import CGMGraph from './CGMGraph';
-
-// Import video clips
-import clip1 from '../assets/Clip1.mp4';
-import clip2 from '../assets/Clip2.mp4';
-import clip3 from '../assets/Clip3 1.mp4';
 
 export default function WhatImBuilding() {
-  const cgmContainerRef = useRef(null);
-  const video1Ref = useRef(null);
-  const video2Ref = useRef(null);
-  const video3Ref = useRef(null);
-  const [isSectionInView, setIsSectionInView] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  // Intersection Observer to play videos when in view and pause when off-screen
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsSectionInView(entry.isIntersecting);
-      },
-      { threshold: 0.15 }
-    );
-
-    if (cgmContainerRef.current) {
-      observer.observe(cgmContainerRef.current);
-    }
-
-    return () => {
-      if (cgmContainerRef.current) {
-        observer.unobserve(cgmContainerRef.current);
-      }
-    };
-  }, []);
-
-  // Sync play/pause based on section view and mobile/desktop states
-  useEffect(() => {
-    const videos = [video1Ref.current, video2Ref.current, video3Ref.current];
-    videos.forEach(video => {
-      if (video) {
-        if (isSectionInView) {
-          video.play().catch(err => console.log("Autoplay check failed:", err));
-        } else {
-          video.pause();
-        }
-      }
-    });
-  }, [isMobile, isSectionInView]);
-
 
 
   const journeySteps = [
     {
       num: '01',
       label: 'What I Observed',
-      desc: 'Metabolic disorders are rising rapidly in India. People are overwhelmed with conflicting advice and information overload, but lack clarity and trust.',
+      desc: 'People navigating weight management are overwhelmed by conflicting advice and product claims, and need more clarity and trust.',
       pill: 'Clarity creates action.'
     },
     {
@@ -79,13 +31,13 @@ export default function WhatImBuilding() {
     {
       num: '03',
       label: 'What I\'m Building',
-      desc: 'Beyond Bound is my effort to simplify metabolic health with evidence-backed solutions that are honest, transparent, and genuinely effective.',
+      desc: 'Beyond Bound is my effort to make weight management easier to understand through honest, transparent product information.',
       pill: 'Wellness, done right.'
     },
     {
       num: '04',
       label: 'Where We\'re Going',
-      desc: 'Building a trusted name in metabolic wellness — where prevention comes first and every choice today leads to a healthier tomorrow.',
+      desc: 'Building a trusted weight-management brand that puts clarity, balance, and informed choices first.',
       pill: 'The future starts now.'
     }
   ];
@@ -125,9 +77,9 @@ export default function WhatImBuilding() {
             What I'm Building
           </h2>
           <p className="text-navy/60 dark:text-white/60 font-body text-base sm:text-lg mt-4 max-w-xl mx-auto leading-relaxed">
-            Beyond Bound began with a simple observation: India doesn't need more health products. It needs health brands people can genuinely trust.
+            Beyond Bound began with a simple observation: people navigating weight management need clearer information and products they can trust.
             <br /><br />
-            My focus is metabolic health — one of the most important yet overlooked challenges facing millions of Indians today. Everything I'm building starts from that belief.
+            My focus is weight management — with a commitment to clear information, balanced habits, and responsible product positioning.
           </p>
           <div className="h-0.5 w-16 bg-accent mx-auto mt-6" />
         </div>
@@ -170,10 +122,10 @@ export default function WhatImBuilding() {
                   The idea behind Beyond Bound began with a question that stayed with me for years:
                 </p>
                 <p className="font-semibold text-navy dark:text-white italic">
-                  "Why do we wait for health problems to become serious before we start paying attention to them?"
+                  "Why is weight management so confusing when people are looking for clear, trustworthy guidance?"
                 </p>
                 <p>
-                  Through my studies, industry exposure, and conversations with consumers, I became increasingly interested in metabolic health — the systems that quietly influence energy, blood sugar, weight, and long-term wellbeing.
+                  Through my studies, industry exposure, and conversations with consumers, I became increasingly interested in weight management and the need for clearer, more trustworthy guidance.
                 </p>
                 <p>
                   The challenge wasn't a lack of products. It was a lack of clarity, trust, and meaningful education.
@@ -212,10 +164,10 @@ export default function WhatImBuilding() {
                     The idea behind Beyond Bound began with a question that stayed with me for years:
                   </p>
                   <p className="font-semibold text-navy dark:text-white italic">
-                    "Why do we wait for health problems to become serious before we start paying attention to them?"
+                    "Why is weight management so confusing when people are looking for clear, trustworthy guidance?"
                   </p>
                   <p>
-                    Through my studies, industry exposure, and conversations with consumers, I became increasingly interested in metabolic health — the systems that quietly influence energy, blood sugar, weight, and long-term wellbeing.
+                    Through my studies, industry exposure, and conversations with consumers, I became increasingly interested in weight management and the need for clearer, more trustworthy guidance.
                   </p>
                   <p>
                     The challenge wasn't a lack of products. It was a lack of clarity, trust, and meaningful education.
@@ -229,228 +181,6 @@ export default function WhatImBuilding() {
           )}
         </motion.div>
 
-        {/* ── PART 2 — PROVING IT ON MYSELF FIRST ── */}
-        <motion.div
-          ref={cgmContainerRef}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, margin: '-100px' }}
-          variants={sectionVariants}
-          style={{ willChange: 'transform, opacity' }}
-          className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-16 md:mb-28 w-full"
-        >
-          {isMobile ? (
-            /* Mobile Flow: Title -> Video Frame -> All Paras */
-            <div className="w-full text-left space-y-6">
-              <div>
-                <span className="text-xs font-heading font-semibold uppercase tracking-[0.25em] text-teal dark:text-teal-light block mb-2">
-                  First-Hand Efficacy
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-navy dark:text-white tracking-tight leading-snug">
-                  Proving It on Myself First
-                </h3>
-              </div>
-
-              {/* Video Player Column */}
-              <div className="w-full flex flex-col items-center">
-                {/* Player Frame Card */}
-                <div className="relative w-full aspect-[16/9] rounded-[2rem] border border-accent/20 dark:border-white/10 p-2 bg-white dark:bg-[#0e1f35]/30 shadow-xl dark:shadow-none overflow-hidden group">
-                  {/* Video Viewport */}
-                  <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden bg-black grid grid-cols-3 gap-1.5 sm:gap-2 p-1.5 sm:p-2">
-                    <video
-                      ref={video1Ref}
-                      src={clip1}
-                      autoPlay
-                      loop
-                      playsInline
-                      muted
-                      className="w-full h-full object-cover rounded-lg sm:rounded-xl bg-neutral-900"
-                    />
-                    <video
-                      ref={video2Ref}
-                      src={clip2}
-                      autoPlay
-                      loop
-                      playsInline
-                      muted
-                      className="w-full h-full object-cover rounded-lg sm:rounded-xl bg-neutral-900"
-                    />
-                    <video
-                      ref={video3Ref}
-                      src={clip3}
-                      autoPlay
-                      loop
-                      playsInline
-                      muted
-                      className="w-full h-full object-cover rounded-lg sm:rounded-xl bg-neutral-900"
-                    />
-                  </div>
-                </div>
-
-                {/* Quote below the frame */}
-                <div className="mt-6 w-full max-w-lg bg-accent text-white px-5 py-3 rounded-2xl shadow-md border border-accent/20 text-center">
-                  <span className="font-heading text-xs font-bold uppercase tracking-widest block text-white/95 text-center leading-relaxed">
-                    "What I won't test on myself, I will never ask anyone else to trust."
-                  </span>
-                </div>
-              </div>
-
-              {/* All paragraphs */}
-              <div className="space-y-4 font-body text-navy/80 dark:text-white/80 text-sm sm:text-base leading-relaxed">
-                <p>
-                  Before asking anyone to trust Beyond Bound, I felt a responsibility to understand the problem more deeply myself.
-                </p>
-                <p>
-                  I spent months wearing a continuous glucose monitor, tracking how everyday decisions — food, sleep, movement, and stress — influenced my own metabolic health. What began as curiosity quickly became conviction.
-                </p>
-                <p>
-                  The experience changed the way I thought about wellness. It reminded me that health isn't built through claims or advertising. It's built through understanding, consistency, and measurable change.
-                </p>
-                <p>
-                  That perspective continues to shape everything we build at Beyond Bound today.
-                </p>
-              </div>
-            </div>
-          ) : (
-            /* Desktop Flow */
-            <>
-              {/* LEFT: Story Narrative (5.5/12 -> 4/12 width on desktop) */}
-              <div className={`w-full lg:w-0 order-1 lg:order-1 text-left space-y-6 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${isSectionInView ? 'lg:flex-[4]' : 'lg:flex-[5.5]'
-                }`}>
-                <span className="text-xs font-heading font-semibold uppercase tracking-[0.25em] text-teal dark:text-teal-light block">
-                  First-Hand Efficacy
-                </span>
-
-                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-navy dark:text-white tracking-tight leading-snug">
-                  Proving It on Myself First
-                </h3>
-
-                <div className="space-y-4 font-body text-navy/80 dark:text-white/80 text-sm sm:text-base leading-relaxed">
-                  <p>
-                    Before asking anyone to trust Beyond Bound, I felt a responsibility to understand the problem more deeply myself.
-                  </p>
-                  <p>
-                    I spent months wearing a continuous glucose monitor, tracking how everyday decisions — food, sleep, movement, and stress — influenced my own metabolic health. What began as curiosity quickly became conviction.
-                  </p>
-                  <p>
-                    The experience changed the way I thought about wellness. It reminded me that health isn't built through claims or advertising. It's built through understanding, consistency, and measurable change.
-                  </p>
-                  <p>
-                    That perspective continues to shape everything we build at Beyond Bound today.
-                  </p>
-                </div>
-              </div>
-
-              {/* RIGHT: Video Player Column (6.5/12 -> 8/12 width on desktop) */}
-              <div className={`w-full lg:w-0 order-2 lg:order-2 flex flex-col items-center transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${isSectionInView ? 'lg:flex-[8]' : 'lg:flex-[6.5]'
-                }`}>
-                {/* Player Frame Card */}
-                <div className={`relative w-full aspect-[16/9] rounded-[2rem] border border-accent/20 dark:border-white/10 p-2 bg-white dark:bg-[#0e1f35]/30 shadow-xl dark:shadow-none overflow-hidden group transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${isSectionInView ? 'scale-[1.03] shadow-2xl shadow-accent/5' : 'scale-100 shadow-xl'
-                  }`}>
-
-                  {/* Subtle Top-Left Badge (Hidden on Mobile) */}
-                  <div className="absolute top-4 left-4 z-20 bg-navy/85 dark:bg-[#081220]/80 backdrop-blur-md border border-white/10 text-white text-[9px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest font-heading select-none pointer-events-none hidden sm:block">
-                    Founder Self-Observation
-                  </div>
-
-                  {/* Video Viewport */}
-                  <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden bg-black grid grid-cols-3 gap-1.5 sm:gap-2 p-1.5 sm:p-2">
-                    <video
-                      ref={video1Ref}
-                      src={clip1}
-                      autoPlay
-                      loop
-                      playsInline
-                      muted
-                      className="w-full h-full object-cover rounded-lg sm:rounded-xl bg-neutral-900"
-                    />
-                    <video
-                      ref={video2Ref}
-                      src={clip2}
-                      autoPlay
-                      loop
-                      playsInline
-                      muted
-                      className="w-full h-full object-cover rounded-lg sm:rounded-xl bg-neutral-900"
-                    />
-                    <video
-                      ref={video3Ref}
-                      src={clip3}
-                      autoPlay
-                      loop
-                      playsInline
-                      muted
-                      className="w-full h-full object-cover rounded-lg sm:rounded-xl bg-neutral-900"
-                    />
-                  </div>
-                </div>
-
-                {/* Quote below the frame */}
-                <div className="mt-6 w-full max-w-lg bg-accent text-white px-5 py-3 rounded-2xl shadow-md border border-accent/20 text-center">
-                  <span className="font-heading text-xs font-bold uppercase tracking-widest block text-white/95 text-center leading-relaxed">
-                    "What I won't test on myself, I will never ask anyone else to trust."
-                  </span>
-                </div>
-              </div>
-            </>
-          )}
-        </motion.div>
-
-        {/* ── PART 2.5 — THE DATA BEHIND THE CONVICTION (CGM GRAPH & FRAMEWORK) ── */}
-        <div className="mb-16 md:mb-28 max-w-6xl mx-auto w-full">
-          {/* Transition Chapter Headline */}
-          <div className="text-left mb-8 w-full">
-            <span className="text-[10px] font-heading font-semibold uppercase tracking-[0.25em] text-teal dark:text-teal-light block">
-              THE DATA BEHIND THE CONVICTION
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-heading font-bold text-navy dark:text-white tracking-tight mt-3 max-w-3xl">
-              Before building a metabolic health company, I wanted to understand my own metabolism first.
-            </h3>
-            <p className="text-navy/60 dark:text-white/60 font-body text-xs sm:text-sm mt-3 leading-relaxed max-w-2xl">
-              Continuous glucose-monitor self-observation across multiple seasons. Same meals. Same routines. The formulation was the variable being evaluated.
-            </p>
-          </div>
-
-          {/* Premium Animated CGM Graph */}
-          <CGMGraph />
-
-          {/* Premium Stat Cards for Observation Framework */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8 w-full">
-            <div className="bg-[#FAF9F5]/40 dark:bg-[#0e1f35]/25 border border-neutral-100 dark:border-white/5 p-6 rounded-2xl text-left">
-              <span className="text-[10px] font-heading font-semibold uppercase tracking-[0.25em] text-accent block">
-                CGM Tracking
-              </span>
-              <span className="text-sm sm:text-base font-heading font-bold text-navy dark:text-white mt-1.5 block">
-                Continuous monitoring
-              </span>
-            </div>
-            <div className="bg-[#FAF9F5]/40 dark:bg-[#0e1f35]/25 border border-neutral-100 dark:border-white/5 p-6 rounded-2xl text-left">
-              <span className="text-[10px] font-heading font-semibold uppercase tracking-[0.25em] text-accent block">
-                Multiple Seasons
-              </span>
-              <span className="text-sm sm:text-base font-heading font-bold text-navy dark:text-white mt-1.5 block">
-                Repeated observations
-              </span>
-            </div>
-            <div className="bg-[#FAF9F5]/40 dark:bg-[#0e1f35]/25 border border-neutral-100 dark:border-white/5 p-6 rounded-2xl text-left">
-              <span className="text-[10px] font-heading font-semibold uppercase tracking-[0.25em] text-accent block">
-                Consistent Inputs
-              </span>
-              <span className="text-sm sm:text-base font-heading font-bold text-navy dark:text-white mt-1.5 block">
-                Comparable meal patterns
-              </span>
-            </div>
-            <div className="bg-[#FAF9F5]/40 dark:bg-[#0e1f35]/25 border border-neutral-100 dark:border-white/5 p-6 rounded-2xl text-left">
-              <span className="text-[10px] font-heading font-semibold uppercase tracking-[0.25em] text-accent block">
-                Founder-Led
-              </span>
-              <span className="text-sm sm:text-base font-heading font-bold text-navy dark:text-white mt-1.5 block">
-                Personally conducted
-              </span>
-            </div>
-          </div>
-        </div>
-
         {/* ── PART 3 — FROM OBSERVATION TO IMPACT ── */}
         <div className="mb-16 md:mb-28 max-w-6xl mx-auto w-full">
           {/* Section Header */}
@@ -462,10 +192,10 @@ export default function WhatImBuilding() {
             className="text-center mb-16 md:mb-20"
           >
             <h3 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-heading font-bold text-navy dark:text-white tracking-tight leading-tight">
-              From <span className="text-teal dark:text-teal-light">observation</span> to impact.
+              From <span className="text-teal dark:text-teal-light">clarity</span> to impact.
             </h3>
             <p className="text-navy/55 dark:text-white/55 font-body text-sm sm:text-base mt-4 max-w-2xl mx-auto leading-relaxed">
-              My journey is built on four simple beliefs that shape everything I'm building.
+              My journey is built on four simple beliefs that shape our weight-management focus.
             </p>
           </motion.div>
 
@@ -754,7 +484,7 @@ export default function WhatImBuilding() {
                 Beyond Bound®
               </h3>
               <p className="text-navy/65 dark:text-white/60 font-body text-sm sm:text-base mt-3 leading-relaxed max-w-xl">
-                A science-led wellness brand for everyday India — starting where the quiet damage starts: metabolism.
+                A wellness brand for everyday India, focused on clear and responsible weight-management support.
               </p>
               {/* Registered Brand Badge */}
               <div className="mt-5 inline-flex items-center gap-3 bg-[#F0FAF9] dark:bg-[#0e1f35]/60 border border-teal/15 dark:border-teal-light/15 rounded-full px-4 py-2">
@@ -806,21 +536,21 @@ export default function WhatImBuilding() {
                   VISION
                 </span>
                 <p className="font-heading font-bold text-lg sm:text-xl text-navy dark:text-white leading-snug">
-                  An India where metabolic care is normal, measured, and affordable, and where 'natural' and 'evidence-based' are no longer opposites.
+                  An India where people have clearer, more trustworthy choices for healthy weight management.
                 </p>
               </div>
 
               {/* Approach Card */}
               <div className="bg-[#EEFAF8] dark:bg-[#0a2420]/50 border border-teal/10 dark:border-teal-light/10 rounded-2xl p-6 sm:p-8">
                 <h4 className="font-heading font-bold text-base sm:text-lg text-navy dark:text-white mb-5">
-                  The approach: measure first, market second
+                  The approach: clarity first, claims second
                 </h4>
                 <ul className="space-y-3.5">
                   {[
-                    'Start with the body\'s own rhythm, not a crash protocol.',
-                    'Test on the founder before anyone else, with real instruments.',
-                    'Say only what can be defended — careful claims, honest labels.',
-                    'Publish the observations, including the unremarkable ones.'
+                    'Keep the focus on healthy weight management.',
+                    'Encourage balanced, sustainable lifestyle habits.',
+                    'Use clear language and responsible product claims.',
+                    'Make product information easy to understand.'
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-teal dark:text-teal-light mt-0.5 shrink-0">
@@ -866,7 +596,7 @@ export default function WhatImBuilding() {
 
                 {/* Product Description */}
                 <p className="font-body text-sm text-navy/70 dark:text-white/65 leading-relaxed mb-5">
-                  I formulated Glycomics with nature-inspired, science-led ingredients to support healthy weight management as part of a balanced lifestyle, without extreme or aggressive approaches.
+                  Glycomics is a weight-management formula designed to support healthy weight management as part of a balanced lifestyle, without extreme or aggressive approaches.
                 </p>
 
                 {/* Amazon CTA Button */}
