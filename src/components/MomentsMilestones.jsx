@@ -5,7 +5,7 @@ export default function MomentsMilestones() {
     {
       label: 'SHOWCASE',
       title: 'BIRAC Stall at CHEMTECH',
-      description: "Presented Beyond Bound at the Biotechnology Industry Research Assistance Council (BIRAC) stall during CHEMTECH, sharing the brand's approach to metabolic wellness and evidence-backed health solutions."
+      description: "Presented Beyond Bound at the Biotechnology Industry Research Assistance Council (BIRAC) stall during CHEMTECH, sharing the brand's weight-management focus and commitment to clear product information."
     },
     {
       label: 'ENGAGEMENT',
