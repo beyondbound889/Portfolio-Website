@@ -70,7 +70,7 @@ export default function FounderStory() {
           </motion.p>
 
           <motion.p variants={fadeUp}>
-            After management studies, my work in sales and market research confirmed a deeper problem: the market was flooded with generic wellness products, but consumers had no way to verify their claims. There was a lack of focused metabolic brands built on real proof. That was the inevitable next step. Beyond Bound was built to bridge this gap—a brand where agricultural quality meets rigorous healthcare validation, designed for the one system that drives it all: our metabolism.
+            After management studies, my work in sales and market research confirmed a deeper problem: the market was flooded with generic wellness products, but consumers had no way to verify their claims. There was a lack of clear, focused options for people navigating weight management. That was the next step. Beyond Bound was built to bridge this gap with a focused approach to weight management and transparent product information.
           </motion.p>
 
           <motion.p
