@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   const phrases = [
-    'measured by the founder first.',
-    'built on real data, not claims.',
-    'is science-led, not marketed.',
+    'focused on healthy weight management.',
+    'built around clarity, not confusion.',
+    'designed for balanced, sustainable habits.',
   ];
 
   const [phraseIndex, setPhraseIndex] = useState(0);
@@ -160,7 +160,7 @@ export default function Hero() {
                 variants={clipVariants}
                 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-heading tracking-tight text-white leading-[1.15] block max-w-2xl"
               >
-                Evidence-led healthcare
+                Thoughtful weight management
                 <br />
                 <span className="text-teal-400">{displayedText}</span>
                 <span className="inline-block w-[3px] h-[0.85em] bg-teal-400 ml-1 align-middle animate-pulse" />
@@ -173,7 +173,7 @@ export default function Hero() {
               className="space-y-4 text-white/70 font-body text-base sm:text-lg leading-relaxed max-w-xl mb-8"
             >
               <p>
-                I came to this work through agriculture, an MBA, years of product strategy and NPD, and a glucose monitor strapped to my own arm.
+                My background spans agriculture, an MBA, and years of product strategy and new product development. Today, Beyond Bound is focused on weight management and clear, responsible product information.
               </p>
 
             </motion.div>
