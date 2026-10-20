@@ -57,6 +57,64 @@ export default function Hero() {
     }
   };
 
+import { motion } from 'framer-motion';
+
+export default function Hero() {
+  const phrases = [
+    'focused on healthy weight management.',
+    'built around clarity, not confusion.',
+    'designed for balanced, sustainable habits.',
+  ];
+
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentPhrase = phrases[phraseIndex];
+    let timer;
+
+    if (!isDeleting) {
+      // Typing
+      if (displayedText.length < currentPhrase.length) {
+        timer = setTimeout(() => {
+          setDisplayedText(currentPhrase.slice(0, displayedText.length + 1));
+        }, 80);
+      } else {
+        // Pause at end of phrase
+        timer = setTimeout(() => setIsDeleting(true), 2000);
+      }
+    } else {
+      // Deleting (slightly faster)
+      if (displayedText.length > 0) {
+        timer = setTimeout(() => {
+          setDisplayedText(currentPhrase.slice(0, displayedText.length - 1));
+        }, 45);
+      } else {
+        setIsDeleting(false);
+        setPhraseIndex((prev) => (prev + 1) % phrases.length);
+      }
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayedText, isDeleting, phraseIndex]);
+
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   // Staggered reveals
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -150,7 +208,7 @@ export default function Hero() {
                 variants={clipVariants}
                 className="text-sm font-heading font-medium tracking-wide text-white/60 uppercase block"
               >
-                Founder & CEO, Beyond Bound®
+                Founder, Beyond Bound | Results-first builder with a founder's hustle | Ops & Go-to-Market | MBA
               </motion.span>
             </div>
 
