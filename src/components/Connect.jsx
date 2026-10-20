@@ -178,7 +178,7 @@ export default function Connect() {
               </div>
               
               <p className="text-navy/70 dark:text-white/60 font-body text-sm leading-relaxed max-w-md">
-                Building Beyond Bound — a weight-management-focused wellness venture committed to clear product information and honest brand-building in India.
+                Priyanshu Chauhan is the founder of Beyond Bound, a Mumbai-based wellness brand focused on healthy weight management, clear product information, and honest brand-building in India. An MBA from K J Somaiya Institute of Management, he previously worked across agriculture, product strategy, and new product development.
               </p>
 
               {/* Status indicator row */}
