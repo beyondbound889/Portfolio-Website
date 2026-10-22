@@ -5,7 +5,6 @@ import { RiMenuLine, RiCloseLine, RiSunLine, RiMoonLine } from 'react-icons/ri';
 const NAV_LINKS = [
   { label: 'Story', id: 'story' },
   { label: 'Journey', id: 'journey' },
-  { label: 'Insight', id: 'insight' },
   { label: 'Beyond Bound', id: 'building' },
   { label: 'Milestones', id: 'milestones' },
   { label: 'Lessons', id: 'lessons' },
@@ -304,4 +303,3 @@ export default function Navbar({ theme, toggleTheme }) {
     </>
   );
 }
-
