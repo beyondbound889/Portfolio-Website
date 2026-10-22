@@ -143,7 +143,7 @@ export default function ContactSection() {
             variants={containerVariants}
             className="lg:col-span-5 space-y-8"
           >
-            {/* Section label — matches MomentsMilestones / HealthcareGap dash+label style */}
+            {/* Section label — matches MomentsMilestones dash+label style */}
             <motion.div variants={fadeUp} className="flex items-center gap-3">
               <div className="h-[1px] w-8 bg-teal dark:bg-teal-light" />
               <span className="text-xs font-heading font-semibold uppercase tracking-[0.25em] text-teal dark:text-teal-light">
