@@ -501,7 +501,7 @@ export default function WhatImBuilding() {
             </div>
             {/* Amazon Link - Top Right */}
             <a
-              href="https://www.amazon.in/Glycomics-Metabolic-Wellness-Capsules-Berberine/dp/B0GSSGRZYF/ref=sr_1_2?crid=NCHP7X4UD7U0&dib=eyJ2IjoiMSJ9.cJUZ3IcwZKvnKXijjZh0Veiiee3pL5c61H55ewTKHKkRnGEUzUVUdGsm201GS-D-we7_vkxk_dL5fG9Sne7a_r7mgWObZIcJcT_0QZo70d9QMA-yptbnD9p6eAL_he36nbqnL4DJVODjIWMyZG338iGi9oFmARuLKwzqxqEuDe7TgpnlGUh4pjCztPFM-2eqf0ZNp2yQFdfQjG2FbjQx1HqpnVG5opzmFqxb095XcEr1V6iHxkxNTbndlMqPOjcmmV2OlXkzY33mdj2EBhf10WlNgiK6cUhc3H1DgprjvBU.zBPMQnNJPo0dE-tTrojhf5XEMs2AoZomIOYJAJ47aKo&dib_tag=se&keywords=glycomics&qid=1784202213&sprefix=glycomics%2Caps%2C580&sr=8-2&th=1"
+              href="https://www.amazon.in/dp/B0HCHX3KL3?th=1"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-1.5 text-teal dark:text-teal-light font-heading font-semibold text-sm hover:underline underline-offset-4 decoration-teal/30 transition-all duration-300 whitespace-nowrap mt-2 shrink-0"
@@ -601,7 +601,7 @@ export default function WhatImBuilding() {
 
                 {/* Amazon CTA Button */}
                 <a
-                  href="https://www.amazon.in/Glycomics-Metabolic-Wellness-Capsules-Berberine/dp/B0GSSGRZYF/ref=sr_1_2?crid=NCHP7X4UD7U0&dib=eyJ2IjoiMSJ9.cJUZ3IcwZKvnKXijjZh0Veiiee3pL5c61H55ewTKHKkRnGEUzUVUdGsm201GS-D-we7_vkxk_dL5fG9Sne7a_r7mgWObZIcJcT_0QZo70d9QMA-yptbnD9p6eAL_he36nbqnL4DJVODjIWMyZG338iGi9oFmARuLKwzqxqEuDe7TgpnlGUh4pjCztPFM-2eqf0ZNp2yQFdfQjG2FbjQx1HqpnVG5opzmFqxb095XcEr1V6iHxkxNTbndlMqPOjcmmV2OlXkzY33mdj2EBhf10WlNgiK6cUhc3H1DgprjvBU.zBPMQnNJPo0dE-tTrojhf5XEMs2AoZomIOYJAJ47aKo&dib_tag=se&keywords=glycomics&qid=1784202213&sprefix=glycomics%2Caps%2C580&sr=8-2&th=1"
+                  href="https://www.amazon.in/dp/B0HCHX3KL3?th=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-[#081220] border border-border/80 dark:border-white/15 text-navy dark:text-white font-heading font-semibold text-sm rounded-lg hover:border-teal/30 dark:hover:border-teal-light/30 hover:shadow-md transition-all duration-300"
